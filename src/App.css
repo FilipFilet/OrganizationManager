@@ -1,42 +1,89 @@
-#root {
-  max-width: 1280px;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: rgb(59, 59, 59);
+  padding: 10px;
+}
+
+.EmployeesTable, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.EmployeesTable th, .EmployeesTable td {
+  padding: 8px;
+}
+
+.EmployeesTable th {
+  background-color: #4671ff;
+  color: white;
+  text-align: left;
+}
+
+.EmployeesTable tr:nth-child(even) {
+  background-color: #dcdcdc;
+}
+
+.EmployeesTable tr:hover
+{
+  background-color: #c0c0c0;
+}
+
+#forms {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  gap: 40px;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  background-color: #dcdcdc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.inputForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: start;
+  height: 100%;
+}
+
+.inputForm form .btn {
+  background-color: #4671ff;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin-top: auto;
+}
+
+.inputForm .btn:hover {
+  background-color: #3b5bbf;
+  cursor: pointer;
+}
+
+#IsManager {
+  margin-left: 5px;
+}
+
+#OrgList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  grid-gap: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.EmployeesTable {
+  width: 100%;
 }
